@@ -8,9 +8,7 @@ int third_num;
 long random_num_long;
 int random_num_int;
 String val;
-
 void setup() {
-  
   pinMode(6, OUTPUT); 
   pinMode(7, INPUT); 
   Serial.begin(9600);
@@ -33,18 +31,15 @@ void loop() {
     BTSerial.write(val.charAt(1));
     BTSerial.write(val.charAt(2));
     delay(1500);
-//    BTSerial.write(42);
   }else if(random_num_int>9){
     BTSerial.write(val.charAt(0));
     BTSerial.write(val.charAt(0));
     BTSerial.write(val.charAt(1));
     delay(800);
-//    BTSerial.write(42);
   }else{
     BTSerial.write(val.charAt(0));
     BTSerial.write(val.charAt(0));
     delay(700);
-//    BTSerial.write(42);
   }
 }
 
